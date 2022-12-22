@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  
+}
+.nav{
+
+  background-color: rgb(10, 191, 241);
+  padding:2rem 0 1rem 10rem;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav h1{
+  
+  color:rgb(10, 17, 227);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  /* ======================main=================== */
+  .main{
+    background-color:rgb(243, 242, 242);
+    padding:1rem 0 2rem 10rem;
+    
   }
-  to {
-    transform: rotate(360deg);
+  .label{
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
-}
+  .inputs{
+    
+    display: flex;
+  }
+  .Name{
+    padding-right: 3rem;
+  }
+  .input{
+    height:2.5rem;
+    width:15rem;
+  }
+  .Name p{
+    color:rgb(64, 63, 63);
+    padding-left:5px;
+    font-size: large;
+  }
+  .phone{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .inputsame{
+    height:2.5rem;
+    width:30rem;
+  }
+ 
+
+  button{
+    background-color: rgb(34, 73, 34);
+    color: white;
+    padding: 14px 20px;
+   font-size: 1rem;
+   font-weight: 500;
+    border:none;
+    cursor:pointer;
+    width:30%;
+  }
+  
+  .button:hover {
+    opacity:0.8;
+  }
+  .cancelbtn{
+    width:7rem;
+    height:2.5rem;
+    padding:10px 18px;
+    background-color:rgba(237, 29, 6, 0.905);
+    border-style: none;
+    border-radius: 10px;
+    color:white;
+
+  }
+  .container-two{
+    margin-top:2rem;
+    display: flex;
+    gap:16rem;
+    align-items: center;
+  }
+  .pswd{
+    padding-left: 1rem;
+  }
+  span .pswd{
+    float: right;
+    padding-top: 16px;
+  }
+  .btn{
+    margin: 1rem;
+  }
+  @media (max-width:768px){
+    .nav{
+      width:170vw;
+      padding-left:2rem;
+    }
+    .main{
+      width:170vw;
+      padding-left:2rem;
+    }
+
+  }
