@@ -7,7 +7,7 @@ const Validation =( values) =>{
         errors.name = "Name Required"
     }
     else if (values.name.length < 5) {
-        errors.name= "Name must bemore than 5 char"
+        errors.name= "Name must be more than 7 char"
     }
 
     if(!values.password){
