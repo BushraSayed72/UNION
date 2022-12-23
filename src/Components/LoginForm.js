@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import validation from './Validation';
+import '../App.css'
+
 
 function LoginForm() {
-    const [values, setValues]=useState({
+    const [values, setValues] = useState({
         name:'',
         password:''
     })
     const [errors, setError]= useState({})
 
-    function handleChange(e){
+    function handleChange (e){
         setValues({...values,[e.target.name]: e.target.value})
     }
 
@@ -24,27 +26,26 @@ function LoginForm() {
     }
     }, [errors])
 
-
   return ( 
   <form  onSubmit={handleSubmit}>
     <div className='container'>
     <div className='phone'>
             <label className='label'>User Name </label>
             <input className='inputsame' type='text' placeholder='Enter Name' value={values.name} name='name' onChange={handleChange} />
-            {errors.name && <p style={{color:'red', fontSize:'13px'}}> {errors.name}</p>}
+            {errors.name && <p className='error-pwd' > {errors.name}</p>}
         </div>
         
         <div className='phone'>
             <label className='label'> Password</label>
             <input className='inputsame' type='Password' placeholder='Enter Password' value={values.password} name='password' onChange={handleChange}  />
-            {errors.password && <p style={{color:'red', fontSize:'13px'}}> {errors.password}</p>}
+          {errors.password && <p className='error-pwd'> {errors.password} </p>}
         </div>
         <div className='login'>
-         <button className='btn' type='submit'>Login</button>
+         <button className='btn' onClick={handleSubmit}>Login</button>
          <input className='checkbox' type='checkbox' checked="checked"/> <span>Remember me</span>
          </div>
     </div>
-    <div className='container-two' style={{backgroundColor:'whitesmoke'}}>
+    <div className='container-two' >
         <button type='button' className='cancelbtn'>Cancel</button>
         <span className='pswd'>Forget <a href='#'>password?</a></span>
     </div>

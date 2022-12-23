@@ -81,6 +81,7 @@
     display: flex;
     gap:16rem;
     align-items: center;
+    
   }
   .pswd{
     padding-left: 1rem;
@@ -91,6 +92,11 @@
   }
   .btn{
     margin: 1rem;
+  }
+  .error-pwd{
+    color:red;
+    font-size:14px;
+
   }
   @media (max-width:768px){
     .nav{
